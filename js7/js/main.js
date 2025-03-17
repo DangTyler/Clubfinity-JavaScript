@@ -1,28 +1,63 @@
-// Math Methods and Properties
-console.log(Math.PI);
-console.log(Math.trunc(Math.PI));
-console.log(Math.round(Math.PI)); // 3
-console.log(Math.round(3.4)); // 3
-console.log(Math.round(3.5)); // 4
-console.log(Math.ceil(3.4)); // 4
-console.log(Math.floor(3.4)); // 3
-console.log(Math.pow(5, 2)) // 5^2
-console.log(Math.min(2, 0.5, 9));
-console.log(Math.max(2, 0.5, 9))
-console.log(Math.max(2, 9.2, 9))
+// Conditionals: If statements
 
+let customerIsBanned = true;
+let soup = "chicken noodle soup";
+let crackers = true;
+let reply;
+if (customerIsBanned) {
+    reply = "No soup for you!";
+}
+else if (soup && crackers) {
+    reply = `Here's your order of ${soup} & crackers.`;
+}
+else if (soup) {
+    reply = `Here's your order of ${soup}`;
+} else {
+    reply = "Sorry, we're out of soup.";
+}
+console.log(reply);
 
-console.log(Math.random());
-console.log(Math.random());
-console.log(Math.random());
-console.log(Math.random());
-console.log(Math.random());
+let testScore = 89;
+let collegeStudent = true;
+let grade;
 
-// Use floor to return a range
-// Slim chance that random returns 0, and math.ceil will be 0
-console.log(Math.floor(Math.random() * 10) + 1);
-console.log(Math.floor(Math.random() * 10) + 1);
-console.log(Math.floor(Math.random() * 10) + 1);
-console.log(Math.floor(Math.random() * 10) + 1);
-console.log(Math.floor(Math.random() * 10) + 1);
+if (testScore >= 90) {
+    grade = "A";
+} else if (testScore >= 80) {
+    grade = "B";
+} else if (testScore >= 70) {
+    grade = "C"
+}
+else if (testScore >= 60) {
+    grade = "D"
+} else {
+    if (collegeStudent) {
+        grade = "U";
+    } else {
+        grade = "F";
+    }
+}
+console.log(grade);
 
+// Decision tree!
+if (playerOne === computer) { 
+    // tie game!
+} else if (playerOne === "rock") {
+    if (computer === "paper") {
+        // computer wins
+    } else {
+        // playerOne wins
+    }
+} else if (playerOne === "paper") {
+    if (computer === "scissors") {
+        // computer wins
+    } else {
+        // playerOne wins
+    }
+} else {
+    if (computer === "rock") {
+        // computer wins
+    } else {
+        // player one wins
+    }
+}
