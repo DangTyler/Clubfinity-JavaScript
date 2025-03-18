@@ -1,40 +1,43 @@
-// Strings
-const myVariable = "Mathematics";
+// Numbers
 
-// The length property
-console.log(myVariable.length);
-console.log("Every good boy does fine".length);
+// An integer is a whole number.
+const myNumber = 42;
 
-// String Methods
-console.log(myVariable.charAt(0));
-console.log(myVariable.charAt(5));
-console.log(myVariable.charAt(6));
+console.log(myNumber);
 
-console.log(myVariable.indexOf("mat"));
-console.log(myVariable.indexOf("Mat"));
-console.log(myVariable.indexOf("at"));
-console.log(myVariable.indexOf("ati"));
+// A number with a decimal point is a float
+// which references the "floating point"
+const myFloat = 42.0;
 
-console.log(myVariable.lastIndexOf("ati"));
-console.log(myVariable.lastIndexOf("at"));
-console.log(myVariable.lastIndexOf("ath"));
+console.log (myFloat);
 
-console.log(myVariable.slice(5, 8));
-console.log(myVariable.slice(5)); // returns 5 to end
-console.log(myVariable.slice(5, 2)); // returns nothing
-console.log(myVariable.slice(5, 6)); // only starting character
+const myString = "42";
 
-console.log(myVariable.toUpperCase());
-console.log(myVariable.toLowerCase());
+console.log(myString);
 
-console.log(myVariable.includes("div"));
-console.log(myVariable.includes("mat"));
+console.log(myNumber === myFloat)
+console.log(myNumber === myString);
+console.log(myString + 3);
+console.log(Number(myString) === myNumber);
 
-console.log(myVariable.split("e"));
-console.log(myVariable.split(""));
+console.log(Number("Dave"));
+console.log(Number(undefined));
+console.log(Number(1));
+console.log(Number(0));
 
-console.log("John,Joe,Dave".split(","));
-console.log("Every good boy does fine".split(" "));
+// Number Methods
 
+console.log(Number.isInteger(myString));
+console.log(Number.parseFloat(myString));
+console.log(Number.parseFloat(myNumber));
 
-// String docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+console.log(Number.parseFloat(myFloat).toFixed(2));
+console.log(Number.parseInt(myString));
+console.log(typeof myFloat.toString());
+console.log(typeof Number.parseFloat(myString));
+console.log(Number.parseFloat("4.237abc").toFixed(2).toString());
+
+//NaN is an acronym for Not a Number
+
+console.log(Number.isNaN("Dave")); // False; is == NaN and NumberType
+console.log(isNaN("Dave")); // True; is not a number
